@@ -1,15 +1,15 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html
-    destination: /var/www/html
+  - source: /
+    destination: /usr/share/nginx/html
 
 hooks:
   BeforeInstall:
-    - location: scripts/http_install.sh
+    - location: scripts/httpd_install.sh
       timeout: 300
       runas: root
-    - location: scripts/http_start.sh
+    - location: scripts/httpd_start.sh
       timeout: 300
       runas: root
   ApplicationStop:
