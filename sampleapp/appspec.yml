@@ -6,13 +6,13 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: scripts/httpd_install.sh
+    - location: scripts/nginx_install.sh
       timeout: 300
       runas: root
-    - location: scripts/httpd_start.sh
+    - location: scripts/nginx_start.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/httpd_stop.sh
+    - location: scripts/nginx_stop.sh
       timeout: 300
       runas: root
